@@ -25,4 +25,10 @@ ng serve --open
 
 add dependencies and devDependencies inside package.json
 
+### go to Project root directory and install dependencies
+npm install
+
+### buidl angular application
+ng build
+
  
