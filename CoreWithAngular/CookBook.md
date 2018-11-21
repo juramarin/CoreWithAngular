@@ -15,3 +15,9 @@ cd tmp-angular
 ng build
 
 ng serve --open
+
+### copy generated angular code to ClientApp folder
+
+#### copy angular.json na dtsconfig.json to solution root folder
+#### copy * from scr to ClientApp
+ 
