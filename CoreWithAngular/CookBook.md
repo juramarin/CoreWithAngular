@@ -22,13 +22,24 @@ ng serve --open
 #### copy * from scr to ClientApp
 
 ### editing npm config file / package.json
-
 add dependencies and devDependencies inside package.json
+
 
 ### go to Project root directory and install dependencies
 npm install
 
+
 ### buidl angular application
+ng build
+
+
+### add angular to View / i.e. About
+<app-root></app-root>
+
+### do some test changes inside ClientApp angular source code
+
+
+### then run ng build inside root of the Project
 ng build
 
  
