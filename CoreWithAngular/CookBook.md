@@ -20,4 +20,9 @@ ng serve --open
 
 #### copy angular.json na dtsconfig.json to solution root folder
 #### copy * from scr to ClientApp
+
+### editing npm config file / package.json
+
+add dependencies and devDependencies inside package.json
+
  
