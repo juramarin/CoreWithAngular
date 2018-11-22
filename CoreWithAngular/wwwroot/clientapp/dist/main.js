@@ -134,13 +134,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./app/app.component.ts");
 /* harmony import */ var _shop_shop_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shop/shop.component */ "./app/shop/shop.component.ts");
 /* harmony import */ var _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./checkout/checkout.component */ "./app/checkout/checkout.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/dataService */ "./app/shared/dataService.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -165,12 +167,14 @@ var AppModule = /** @class */ (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forRoot(routes, {
+                _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(routes, {
                     useHash: true,
                     enableTracing: false // for Debuging of the Routes
                 })
             ],
-            providers: [],
+            providers: [
+                _shared_dataService__WEBPACK_IMPORTED_MODULE_6__["DataService"]
+            ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
@@ -188,7 +192,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Checkout (view)</h2>\r\n<div>\r\n    <h3>some checkout text</h3>\r\n    <div class=\"col-md-3\">\r\n        <ul>\r\n            <li>some item 1</li>\r\n            <li>some item 2</li>\r\n            <li>some item 3</li>\r\n        </ul>\r\n        <h4>Total: $xxxxx.xx</h4>\r\n    </div>\r\n    <a routerLink=\"\" class=\"btn btn-info\">Back</a>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <h2>Checkout</h2>\r\n    <h3>Some products from DataService</h3>\r\n    <div class=\"col-md-3\">\r\n        <ul>\r\n            <li *ngFor=\"let p of products\">{{ p.title }}: {{ p.price | currency: \"USD\" }}</li>\r\n        </ul>\r\n        <h4>Total: $xxxxx.xx</h4>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n        <a routerLink=\"\" class=\"btn btn-info\">Back</a>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -203,23 +207,63 @@ module.exports = "<h2>Checkout (view)</h2>\r\n<div>\r\n    <h3>some checkout tex
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Checkout", function() { return Checkout; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../shared/dataService */ "./app/shared/dataService.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var Checkout = /** @class */ (function () {
-    function Checkout() {
+    function Checkout(data) {
+        this.data = data;
+        this.products = [];
+        this.products = data.products;
     }
     Checkout = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "the-checkout",
-            template: __webpack_require__(/*! ./checkout.component.html */ "./app/checkout/checkout.component.html")
-        })
+            template: __webpack_require__(/*! ./checkout.component.html */ "./app/checkout/checkout.component.html"),
+            styleUrls: []
+        }),
+        __metadata("design:paramtypes", [_shared_dataService__WEBPACK_IMPORTED_MODULE_1__["DataService"]])
     ], Checkout);
     return Checkout;
+}());
+
+
+
+/***/ }),
+
+/***/ "./app/shared/dataService.ts":
+/*!***********************************!*\
+  !*** ./app/shared/dataService.ts ***!
+  \***********************************/
+/*! exports provided: DataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
+var DataService = /** @class */ (function () {
+    function DataService() {
+        this.products = [{
+                title: "First product",
+                price: 1.00
+            }, {
+                title: "Second product",
+                price: 82.25
+            }, {
+                title: "Third product",
+                price: 117.02
+            }];
+    }
+    return DataService;
 }());
 
 
@@ -233,7 +277,7 @@ var Checkout = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <h3> some shop title</h3>\r\n    <div class=\"col-md-3\">\r\n        <div class=\"well well-sm\">\r\n            some text some text some text some text\r\n        </div>\r\n    </div>\r\n    <a routerLink=\"checkout\" class=\"btn btn-success\">Checkout</a>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <h2>Shop</h2>\r\n    <h3>Some shop description</h3>\r\n    <div class=\"col-md-3\">\r\n        <div class=\"well well-sm\">\r\n            some text some text some text some text\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n        <a routerLink=\"checkout\" class=\"btn btn-success\">Checkout</a>\r\n    </div> \r\n</div>\r\n"
 
 /***/ }),
 

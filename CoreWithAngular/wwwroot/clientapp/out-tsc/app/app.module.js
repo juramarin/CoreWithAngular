@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Shop } from "./shop/shop.component";
 import { Checkout } from "./checkout/checkout.component";
+import { DataService } from "./shared/dataService";
 import { RouterModule } from "@angular/router";
 var routes = [
     { path: "", component: Shop },
@@ -33,7 +34,9 @@ var AppModule = /** @class */ (function () {
                     enableTracing: false // for Debuging of the Routes
                 })
             ],
-            providers: [],
+            providers: [
+                DataService
+            ],
             bootstrap: [AppComponent]
         })
     ], AppModule);

@@ -1,13 +1,16 @@
-﻿<h2>Checkout (view)</h2>
-<div>
-    <h3>some checkout text</h3>
+﻿<div class="row">
+    <h2>Checkout</h2>
+    <h3>Some products from DataService</h3>
     <div class="col-md-3">
         <ul>
-            <li>some item 1</li>
-            <li>some item 2</li>
-            <li>some item 3</li>
+            <li *ngFor="let p of products">{{ p.title }}: {{ p.price | currency: "USD" }}</li>
         </ul>
         <h4>Total: $xxxxx.xx</h4>
     </div>
-    <a routerLink="" class="btn btn-info">Back</a>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <a routerLink="" class="btn btn-info">Back</a>
+    </div>
 </div>
