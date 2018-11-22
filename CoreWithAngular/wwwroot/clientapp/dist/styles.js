@@ -555,7 +555,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Users\mjuranko\Documents\Visual Studio 2017\Projects\CoreWithAngular\CoreWithAngular\ClientApp\styles.css */"./styles.css");
+module.exports = __webpack_require__(/*! D:\Repos\CoreWithAngular\CoreWithAngular\ClientApp\styles.css */"./styles.css");
 
 
 /***/ })

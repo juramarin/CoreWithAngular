@@ -5497,8 +5497,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Users\mjuranko\Documents\Visual Studio 2017\Projects\CoreWithAngular\CoreWithAngular\ClientApp\polyfills.ts */"./polyfills.ts");
-module.exports = __webpack_require__(/*! D:\Users\mjuranko\Documents\Visual Studio 2017\Projects\CoreWithAngular\CoreWithAngular\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+__webpack_require__(/*! D:\Repos\CoreWithAngular\CoreWithAngular\ClientApp\polyfills.ts */"./polyfills.ts");
+module.exports = __webpack_require__(/*! D:\Repos\CoreWithAngular\CoreWithAngular\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
 
 /***/ })
