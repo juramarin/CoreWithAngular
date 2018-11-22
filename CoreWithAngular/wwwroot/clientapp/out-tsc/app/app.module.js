@@ -8,17 +8,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Shop } from "./shop/shop.component";
+import { RouterModule } from "@angular/router";
+var routes = [
+    { path: "", component: Shop },
+    { path: "checkout", component: Shop }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         NgModule({
             declarations: [
-                AppComponent
+                AppComponent,
+                Shop
             ],
             imports: [
                 BrowserModule,
-                AppRoutingModule
+                AppRoutingModule,
+                RouterModule.forRoot(routes, {
+                    useHash: true,
+                    enableTracing: false // for Debuging of the Routes
+                })
             ],
             providers: [],
             bootstrap: [AppComponent]

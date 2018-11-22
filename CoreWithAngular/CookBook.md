@@ -51,4 +51,6 @@ ng build
 ### setup quicker auto build inside Project root
 ng build --watch
 
+### added basic routing
+
  

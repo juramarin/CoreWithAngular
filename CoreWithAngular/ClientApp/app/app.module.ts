@@ -3,14 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Shop } from "./shop/shop.component";
+
+import { RouterModule } from "@angular/router";
+
+let routes = [
+    { path: "", component: Shop },
+    { path: "checkout", component: Shop }
+];
+
 
 @NgModule({
   declarations: [
-    AppComponent
+      AppComponent,
+      Shop
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes, {
+        useHash: true,
+        enableTracing: false // for Debuging of the Routes
+      })
   ],
   providers: [],
   bootstrap: [AppComponent]
