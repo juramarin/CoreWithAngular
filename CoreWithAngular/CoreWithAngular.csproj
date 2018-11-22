@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\checkout\checkout.component.ts" />
     <None Remove="ClientApp\app\shop\shop.component.ts" />
   </ItemGroup>
 
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\checkout\checkout.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\shop\shop.component.ts" />
   </ItemGroup>
 

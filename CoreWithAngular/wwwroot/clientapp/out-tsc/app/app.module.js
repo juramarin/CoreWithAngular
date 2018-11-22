@@ -9,10 +9,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Shop } from "./shop/shop.component";
+import { Checkout } from "./checkout/checkout.component";
 import { RouterModule } from "@angular/router";
 var routes = [
     { path: "", component: Shop },
-    { path: "checkout", component: Shop }
+    { path: "checkout", component: Checkout }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -21,7 +22,8 @@ var AppModule = /** @class */ (function () {
         NgModule({
             declarations: [
                 AppComponent,
-                Shop
+                Shop,
+                Checkout
             ],
             imports: [
                 BrowserModule,

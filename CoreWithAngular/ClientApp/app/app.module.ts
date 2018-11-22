@@ -4,19 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Shop } from "./shop/shop.component";
+import { Checkout } from "./checkout/checkout.component";
 
 import { RouterModule } from "@angular/router";
 
 let routes = [
     { path: "", component: Shop },
-    { path: "checkout", component: Shop }
+    { path: "checkout", component: Checkout }
 ];
 
 
 @NgModule({
   declarations: [
       AppComponent,
-      Shop
+      Shop,
+      Checkout
   ],
   imports: [
     BrowserModule,
