@@ -12,8 +12,9 @@ import { Shop } from "./shop/shop.component";
 import { Checkout } from "./checkout/checkout.component";
 import { DataService } from "./shared/dataService";
 import { RouterModule } from "@angular/router";
+import { HeroesComponent } from './heroes/heroes.component';
 var routes = [
-    { path: "", component: Shop },
+    { path: "", component: HeroesComponent },
     { path: "checkout", component: Checkout }
 ];
 var AppModule = /** @class */ (function () {
@@ -24,7 +25,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 AppComponent,
                 Shop,
-                Checkout
+                Checkout,
+                HeroesComponent
             ],
             imports: [
                 BrowserModule,

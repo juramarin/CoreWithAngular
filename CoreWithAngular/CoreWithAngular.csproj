@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <None Remove="ClientApp\app\checkout\checkout.component.ts" />
+    <None Remove="ClientApp\app\hero.ts" />
+    <None Remove="ClientApp\app\mock-heroes.ts" />
     <None Remove="ClientApp\app\shared\dataService.ts" />
     <None Remove="ClientApp\app\shop\shop.component.ts" />
   </ItemGroup>
@@ -24,6 +26,8 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\checkout\checkout.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\hero.ts" />
+    <TypeScriptCompile Include="ClientApp\app\mock-heroes.ts" />
     <TypeScriptCompile Include="ClientApp\app\shared\dataService.ts" />
     <TypeScriptCompile Include="ClientApp\app\shop\shop.component.ts" />
   </ItemGroup>

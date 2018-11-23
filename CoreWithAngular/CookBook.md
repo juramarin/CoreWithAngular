@@ -56,4 +56,10 @@ ng build --watch
 
 ### added Services
 
+
+### add Heroes editor / example from angular.io
+
+
+### displaying a list
+
  
