@@ -102,7 +102,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'hero editor example';
+        this.title = 'hero editor example (services)';
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -136,9 +136,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shop_shop_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shop/shop.component */ "./app/shop/shop.component.ts");
 /* harmony import */ var _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./checkout/checkout.component */ "./app/checkout/checkout.component.ts");
 /* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/dataService */ "./app/shared/dataService.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./heroes/heroes.component */ "./app/heroes/heroes.component.ts");
-/* harmony import */ var _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./hero-detail/hero-detail.component */ "./app/hero-detail/hero-detail.component.ts");
+/* harmony import */ var _hero_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./hero.service */ "./app/hero.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./heroes/heroes.component */ "./app/heroes/heroes.component.ts");
+/* harmony import */ var _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./hero-detail/hero-detail.component */ "./app/hero-detail/hero-detail.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -156,8 +157,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
-    { path: "", component: _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_9__["HeroesComponent"] },
+    { path: "", component: _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_10__["HeroesComponent"] },
     { path: "checkout", component: _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_6__["Checkout"] }
 ];
 var AppModule = /** @class */ (function () {
@@ -169,20 +171,21 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                 _shop_shop_component__WEBPACK_IMPORTED_MODULE_5__["Shop"],
                 _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_6__["Checkout"],
-                _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_9__["HeroesComponent"],
-                _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_10__["HeroDetailComponent"]
+                _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_10__["HeroesComponent"],
+                _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_11__["HeroDetailComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot(routes, {
+                _angular_router__WEBPACK_IMPORTED_MODULE_9__["RouterModule"].forRoot(routes, {
                     useHash: true,
                     enableTracing: false // for Debuging of the Routes
                 })
             ],
             providers: [
-                _shared_dataService__WEBPACK_IMPORTED_MODULE_7__["DataService"]
+                _shared_dataService__WEBPACK_IMPORTED_MODULE_7__["DataService"],
+                _hero_service__WEBPACK_IMPORTED_MODULE_8__["HeroService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
@@ -318,6 +321,48 @@ var HeroDetailComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./app/hero.service.ts":
+/*!*****************************!*\
+  !*** ./app/hero.service.ts ***!
+  \*****************************/
+/*! exports provided: HeroService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeroService", function() { return HeroService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _mock_heroes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mock-heroes */ "./app/mock-heroes.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HeroService = /** @class */ (function () {
+    function HeroService() {
+    }
+    HeroService.prototype.getHeroes = function () {
+        return _mock_heroes__WEBPACK_IMPORTED_MODULE_1__["HEROES"];
+    };
+    HeroService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], HeroService);
+    return HeroService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./app/hero.ts":
 /*!*********************!*\
   !*** ./app/hero.ts ***!
@@ -371,7 +416,7 @@ module.exports = "<h2>My Heroes M/D</h2>\r\n<ul class=\"heroes\">\r\n    <li *ng
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeroesComponent", function() { return HeroesComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _mock_heroes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mock-heroes */ "./app/mock-heroes.ts");
+/* harmony import */ var _hero_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hero.service */ "./app/hero.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -384,17 +429,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var HeroesComponent = /** @class */ (function () {
-    function HeroesComponent() {
+    function HeroesComponent(heroService) {
+        this.heroService = heroService;
         this.hero = {
             id: 1,
             name: 'Windstorm'
         };
-        this.heroes = _mock_heroes__WEBPACK_IMPORTED_MODULE_1__["HEROES"];
     }
+    HeroesComponent.prototype.ngOnInit = function () {
+        this.getHeroes();
+    };
     HeroesComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
     };
-    HeroesComponent.prototype.ngOnInit = function () {
+    HeroesComponent.prototype.getHeroes = function () {
+        this.heroes = this.heroService.getHeroes();
     };
     HeroesComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -402,7 +451,7 @@ var HeroesComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./heroes.component.html */ "./app/heroes/heroes.component.html"),
             styles: [__webpack_require__(/*! ./heroes.component.css */ "./app/heroes/heroes.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_hero_service__WEBPACK_IMPORTED_MODULE_1__["HeroService"]])
     ], HeroesComponent);
     return HeroesComponent;
 }());

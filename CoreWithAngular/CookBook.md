@@ -62,4 +62,14 @@ ng build --watch
 
 ### displaying a list
 
+### Creating components
+
+ng generate component hero-detail
+
+### Creating services
+
+ng generate service hero
+
+
+
  

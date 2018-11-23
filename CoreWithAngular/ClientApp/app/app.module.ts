@@ -6,7 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Shop } from "./shop/shop.component";
 import { Checkout } from "./checkout/checkout.component";
+
 import { DataService } from "./shared/dataService";
+import { HeroService } from "./hero.service";
 
 import { RouterModule } from "@angular/router";
 import { HeroesComponent } from './heroes/heroes.component';
@@ -36,7 +38,8 @@ let routes = [
       })
   ],
     providers: [
-      DataService
+      DataService,
+      HeroService
   ],
   bootstrap: [AppComponent]
 })
