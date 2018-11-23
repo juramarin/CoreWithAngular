@@ -13,6 +13,7 @@ import { HeroService } from "./hero.service";
 import { RouterModule } from "@angular/router";
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 let routes = [
     { path: "", component: HeroesComponent },
@@ -26,7 +27,8 @@ let routes = [
       Shop,
       Checkout,
       HeroesComponent,
-      HeroDetailComponent
+      HeroDetailComponent,
+      MessagesComponent
   ],
   imports: [
     BrowserModule,

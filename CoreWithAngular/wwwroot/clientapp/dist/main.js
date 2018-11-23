@@ -78,7 +78,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\r\n    <img width=\"80\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n    <h1>{{ title }}</h1>\r\n</div>\n\n<hr />\n\n<app-heroes></app-heroes>\n\n<!--<router-outlet></router-outlet>-->\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n    <img width=\"80\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n    <h1>{{ title }}</h1>\r\n</div>\r\n\r\n<hr />\r\n\r\n<app-heroes></app-heroes>\r\n<app-messages></app-messages>\r\n\r\n<!--<router-outlet></router-outlet>-->\r\n"
 
 /***/ }),
 
@@ -140,12 +140,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./heroes/heroes.component */ "./app/heroes/heroes.component.ts");
 /* harmony import */ var _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./hero-detail/hero-detail.component */ "./app/hero-detail/hero-detail.component.ts");
+/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./messages/messages.component */ "./app/messages/messages.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -172,7 +174,8 @@ var AppModule = /** @class */ (function () {
                 _shop_shop_component__WEBPACK_IMPORTED_MODULE_5__["Shop"],
                 _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_6__["Checkout"],
                 _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_10__["HeroesComponent"],
-                _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_11__["HeroDetailComponent"]
+                _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_11__["HeroDetailComponent"],
+                _messages_messages_component__WEBPACK_IMPORTED_MODULE_12__["MessagesComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -334,6 +337,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _mock_heroes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mock-heroes */ "./app/mock-heroes.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "../node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _message_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./message.service */ "./app/message.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -346,17 +350,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var HeroService = /** @class */ (function () {
-    function HeroService() {
+    function HeroService(messageService) {
+        this.messageService = messageService;
     }
     HeroService.prototype.getHeroes = function () {
+        // TODO: send the message _after_ fetching the heroes
+        this.messageService.add('HeroService: fetched heroes');
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(_mock_heroes__WEBPACK_IMPORTED_MODULE_1__["HEROES"]);
     };
     HeroService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"]])
     ], HeroService);
     return HeroService;
 }());
@@ -458,6 +466,112 @@ var HeroesComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_hero_service__WEBPACK_IMPORTED_MODULE_1__["HeroService"]])
     ], HeroesComponent);
     return HeroesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./app/message.service.ts":
+/*!********************************!*\
+  !*** ./app/message.service.ts ***!
+  \********************************/
+/*! exports provided: MessageService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageService", function() { return MessageService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var MessageService = /** @class */ (function () {
+    function MessageService() {
+        this.messages = [];
+    }
+    MessageService.prototype.add = function (message) {
+        this.messages.push(message);
+    };
+    MessageService.prototype.clear = function () {
+        this.messages = [];
+    };
+    MessageService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], MessageService);
+    return MessageService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./app/messages/messages.component.css":
+/*!*********************************************!*\
+  !*** ./app/messages/messages.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* MessagesComponent's private CSS styles */\r\nh2 {\r\n    color: red;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-weight: lighter;\r\n}\r\nbody {\r\n    margin: 2em;\r\n}\r\nbody, input[text], button {\r\n    color: crimson;\r\n    font-family: Cambria, Georgia;\r\n}\r\nbutton.clear {\r\n        font-family: Arial;\r\n        background-color: #eee;\r\n        border: none;\r\n        padding: 5px 10px;\r\n        border-radius: 4px;\r\n        cursor: pointer;\r\n        cursor: hand;\r\n    }\r\nbutton:hover {\r\n        background-color: #cfd8dc;\r\n    }\r\nbutton:disabled {\r\n        background-color: #eee;\r\n        color: #aaa;\r\n        cursor: auto;\r\n    }\r\nbutton.clear {\r\n        color: #888;\r\n        margin-bottom: 12px;\r\n    }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNsaWVudEFwcC9hcHAvbWVzc2FnZXMvbWVzc2FnZXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0Q0FBNEM7QUFDNUM7SUFDSSxXQUFXO0lBQ1gsMENBQTBDO0lBQzFDLHFCQUFxQjtDQUN4QjtBQUVEO0lBQ0ksWUFBWTtDQUNmO0FBRUQ7SUFDSSxlQUFlO0lBQ2YsOEJBQThCO0NBQ2pDO0FBRUc7UUFDSSxtQkFBbUI7UUFDbkIsdUJBQXVCO1FBQ3ZCLGFBQWE7UUFDYixrQkFBa0I7UUFDbEIsbUJBQW1CO1FBQ25CLGdCQUFnQjtRQUNoQixhQUFhO0tBQ2hCO0FBRUQ7UUFDSSwwQkFBMEI7S0FDN0I7QUFFRDtRQUNJLHVCQUF1QjtRQUN2QixZQUFZO1FBQ1osYUFBYTtLQUNoQjtBQUVEO1FBQ0ksWUFBWTtRQUNaLG9CQUFvQjtLQUN2QiIsImZpbGUiOiJDbGllbnRBcHAvYXBwL21lc3NhZ2VzL21lc3NhZ2VzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBNZXNzYWdlc0NvbXBvbmVudCdzIHByaXZhdGUgQ1NTIHN0eWxlcyAqL1xyXG5oMiB7XHJcbiAgICBjb2xvcjogcmVkO1xyXG4gICAgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXdlaWdodDogbGlnaHRlcjtcclxufVxyXG5cclxuYm9keSB7XHJcbiAgICBtYXJnaW46IDJlbTtcclxufVxyXG5cclxuYm9keSwgaW5wdXRbdGV4dF0sIGJ1dHRvbiB7XHJcbiAgICBjb2xvcjogY3JpbXNvbjtcclxuICAgIGZvbnQtZmFtaWx5OiBDYW1icmlhLCBHZW9yZ2lhO1xyXG59XHJcblxyXG4gICAgYnV0dG9uLmNsZWFyIHtcclxuICAgICAgICBmb250LWZhbWlseTogQXJpYWw7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2VlZTtcclxuICAgICAgICBib3JkZXI6IG5vbmU7XHJcbiAgICAgICAgcGFkZGluZzogNXB4IDEwcHg7XHJcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgICAgICBjdXJzb3I6IGhhbmQ7XHJcbiAgICB9XHJcblxyXG4gICAgYnV0dG9uOmhvdmVyIHtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2ZkOGRjO1xyXG4gICAgfVxyXG5cclxuICAgIGJ1dHRvbjpkaXNhYmxlZCB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2VlZTtcclxuICAgICAgICBjb2xvcjogI2FhYTtcclxuICAgICAgICBjdXJzb3I6IGF1dG87XHJcbiAgICB9XHJcblxyXG4gICAgYnV0dG9uLmNsZWFyIHtcclxuICAgICAgICBjb2xvcjogIzg4ODtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAxMnB4O1xyXG4gICAgfVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./app/messages/messages.component.html":
+/*!**********************************************!*\
+  !*** ./app/messages/messages.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"messageService.messages.length\">\r\n\r\n    <h2>Messages</h2>\r\n    <button class=\"clear\"\r\n            (click)=\"messageService.clear()\">\r\n        clear\r\n    </button>\r\n    <div *ngFor='let message of messageService.messages'> {{message}} </div>\r\n\r\n</div>"
+
+/***/ }),
+
+/***/ "./app/messages/messages.component.ts":
+/*!********************************************!*\
+  !*** ./app/messages/messages.component.ts ***!
+  \********************************************/
+/*! exports provided: MessagesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessagesComponent", function() { return MessagesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _message_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../message.service */ "./app/message.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MessagesComponent = /** @class */ (function () {
+    function MessagesComponent(messageService) {
+        this.messageService = messageService;
+    }
+    MessagesComponent.prototype.ngOnInit = function () {
+    };
+    MessagesComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-messages',
+            template: __webpack_require__(/*! ./messages.component.html */ "./app/messages/messages.component.html"),
+            styles: [__webpack_require__(/*! ./messages.component.css */ "./app/messages/messages.component.css")]
+        }),
+        __metadata("design:paramtypes", [_message_service__WEBPACK_IMPORTED_MODULE_1__["MessageService"]])
+    ], MessagesComponent);
+    return MessagesComponent;
 }());
 
 
