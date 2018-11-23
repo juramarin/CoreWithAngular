@@ -5,6 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { Checkout } from "./checkout/checkout.component";
 import { DataService } from "./shared/dataService";
 import { RouterModule } from "@angular/router";
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 var routes = [
     { path: "", component: HeroesComponent },
     { path: "checkout", component: Checkout }
@@ -26,10 +28,12 @@ var AppModule = /** @class */ (function () {
                 AppComponent,
                 Shop,
                 Checkout,
-                HeroesComponent
+                HeroesComponent,
+                HeroDetailComponent
             ],
             imports: [
                 BrowserModule,
+                FormsModule,
                 AppRoutingModule,
                 RouterModule.forRoot(routes, {
                     useHash: true,

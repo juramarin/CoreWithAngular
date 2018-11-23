@@ -10,6 +10,7 @@ import { DataService } from "./shared/dataService";
 
 import { RouterModule } from "@angular/router";
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 let routes = [
     { path: "", component: HeroesComponent },
@@ -22,7 +23,8 @@ let routes = [
       AppComponent,
       Shop,
       Checkout,
-      HeroesComponent
+      HeroesComponent,
+      HeroDetailComponent
   ],
   imports: [
     BrowserModule,

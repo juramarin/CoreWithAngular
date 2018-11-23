@@ -7,30 +7,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
-import { HEROES } from '../mock-heroes';
-var HeroesComponent = /** @class */ (function () {
-    function HeroesComponent() {
-        this.hero = {
-            id: 1,
-            name: 'Windstorm'
-        };
-        this.heroes = HEROES;
+import { Component, Input } from '@angular/core';
+import { Hero } from '../hero';
+var HeroDetailComponent = /** @class */ (function () {
+    function HeroDetailComponent() {
     }
-    HeroesComponent.prototype.onSelect = function (hero) {
-        this.selectedHero = hero;
+    HeroDetailComponent.prototype.ngOnInit = function () {
     };
-    HeroesComponent.prototype.ngOnInit = function () {
-    };
-    HeroesComponent = __decorate([
+    __decorate([
+        Input(),
+        __metadata("design:type", Hero)
+    ], HeroDetailComponent.prototype, "hero", void 0);
+    HeroDetailComponent = __decorate([
         Component({
-            selector: 'app-heroes',
-            templateUrl: './heroes.component.html',
-            styleUrls: ['./heroes.component.css']
+            selector: 'app-hero-detail',
+            templateUrl: './hero-detail.component.html',
+            styleUrls: ['./hero-detail.component.css']
         }),
         __metadata("design:paramtypes", [])
-    ], HeroesComponent);
-    return HeroesComponent;
+    ], HeroDetailComponent);
+    return HeroDetailComponent;
 }());
-export { HeroesComponent };
-//# sourceMappingURL=heroes.component.js.map
+export { HeroDetailComponent };
+//# sourceMappingURL=hero-detail.component.js.map

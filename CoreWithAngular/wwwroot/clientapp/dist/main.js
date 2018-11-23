@@ -138,12 +138,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/dataService */ "./app/shared/dataService.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./heroes/heroes.component */ "./app/heroes/heroes.component.ts");
+/* harmony import */ var _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./hero-detail/hero-detail.component */ "./app/hero-detail/hero-detail.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -167,7 +169,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                 _shop_shop_component__WEBPACK_IMPORTED_MODULE_5__["Shop"],
                 _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_6__["Checkout"],
-                _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_9__["HeroesComponent"]
+                _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_9__["HeroesComponent"],
+                _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_10__["HeroDetailComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -246,6 +249,95 @@ var Checkout = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./app/hero-detail/hero-detail.component.css":
+/*!***************************************************!*\
+  !*** ./app/hero-detail/hero-detail.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJDbGllbnRBcHAvYXBwL2hlcm8tZGV0YWlsL2hlcm8tZGV0YWlsLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./app/hero-detail/hero-detail.component.html":
+/*!****************************************************!*\
+  !*** ./app/hero-detail/hero-detail.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"hero\">\r\n\r\n    <h2>{{hero.name | uppercase}} Details</h2>\r\n    <div><span>id: </span>{{hero.id}}</div>\r\n    <div>\r\n        <label>\r\n            name:\r\n            <input [(ngModel)]=\"hero.name\" placeholder=\"name\" />\r\n        </label>\r\n    </div>\r\n\r\n</div>"
+
+/***/ }),
+
+/***/ "./app/hero-detail/hero-detail.component.ts":
+/*!**************************************************!*\
+  !*** ./app/hero-detail/hero-detail.component.ts ***!
+  \**************************************************/
+/*! exports provided: HeroDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeroDetailComponent", function() { return HeroDetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hero */ "./app/hero.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HeroDetailComponent = /** @class */ (function () {
+    function HeroDetailComponent() {
+    }
+    HeroDetailComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _hero__WEBPACK_IMPORTED_MODULE_1__["Hero"])
+    ], HeroDetailComponent.prototype, "hero", void 0);
+    HeroDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-hero-detail',
+            template: __webpack_require__(/*! ./hero-detail.component.html */ "./app/hero-detail/hero-detail.component.html"),
+            styles: [__webpack_require__(/*! ./hero-detail.component.css */ "./app/hero-detail/hero-detail.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], HeroDetailComponent);
+    return HeroDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./app/hero.ts":
+/*!*********************!*\
+  !*** ./app/hero.ts ***!
+  \*********************/
+/*! exports provided: Hero */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Hero", function() { return Hero; });
+var Hero = /** @class */ (function () {
+    function Hero() {
+    }
+    return Hero;
+}());
+
+
+
+/***/ }),
+
 /***/ "./app/heroes/heroes.component.css":
 /*!*****************************************!*\
   !*** ./app/heroes/heroes.component.css ***!
@@ -264,7 +356,7 @@ module.exports = "/* HeroesComponent's private CSS styles */\r\n.selected {\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>My Heroes</h2>\r\n<ul class=\"heroes\">\r\n    <li *ngFor=\"let hero of heroes\"\r\n        [class.selected]=\"hero === selectedHero\"\r\n        (click)=\"onSelect(hero)\">\r\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\r\n    </li>\r\n</ul>\r\n\r\n<div *ngIf=\"selectedHero\">\r\n\r\n    <h2>{{selectedHero.name | uppercase}} Details</h2>\r\n    <div><span>id: </span>{{selectedHero.id}}</div>\r\n    <div>\r\n        <label>\r\n            name:\r\n            <input [(ngModel)]=\"selectedHero.name\" placeholder=\"name\">\r\n        </label>\r\n    </div>\r\n\r\n</div>\r\n"
+module.exports = "<h2>My Heroes M/D</h2>\r\n<ul class=\"heroes\">\r\n    <li *ngFor=\"let hero of heroes\"\r\n        [class.selected]=\"hero === selectedHero\"\r\n        (click)=\"onSelect(hero)\">\r\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\r\n    </li>\r\n</ul>\r\n\r\n<app-hero-detail [hero]=\"selectedHero\"></app-hero-detail>"
 
 /***/ }),
 
