@@ -78,7 +78,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\r\n    <img width=\"80\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n    <h1>{{ title }}</h1>\r\n</div>\n\n<hr />\n\n<app-heroes></app-heroes>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\r\n    <img width=\"80\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n    <h1>{{ title }}</h1>\r\n</div>\n\n<hr />\n\n<app-heroes></app-heroes>\n\n<!--<router-outlet></router-outlet>-->\n"
 
 /***/ }),
 
@@ -264,7 +264,7 @@ module.exports = "/* HeroesComponent's private CSS styles */\r\n.selected {\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<h2>{{hero.name | uppercase }} Details</h2>\r\n<div><span>id: </span>{{hero.id}}</div>\r\n<div><span>name: </span>{{hero.name}}</div>\r\n\r\n<hr />\r\n\r\n<div>\r\n    <label>\r\n        name:\r\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\r\n    </label>\r\n</div>\r\n\r\n<hr />\r\n\r\n<h2>My Heroes</h2>\r\n<ul class=\"heroes\">\r\n    <li *ngFor=\"let hero of heroes\">\r\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\r\n    </li>\r\n</ul>\r\n"
+module.exports = "<h2>My Heroes</h2>\r\n<ul class=\"heroes\">\r\n    <li *ngFor=\"let hero of heroes\"\r\n        [class.selected]=\"hero === selectedHero\"\r\n        (click)=\"onSelect(hero)\">\r\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\r\n    </li>\r\n</ul>\r\n\r\n<div *ngIf=\"selectedHero\">\r\n\r\n    <h2>{{selectedHero.name | uppercase}} Details</h2>\r\n    <div><span>id: </span>{{selectedHero.id}}</div>\r\n    <div>\r\n        <label>\r\n            name:\r\n            <input [(ngModel)]=\"selectedHero.name\" placeholder=\"name\">\r\n        </label>\r\n    </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -299,6 +299,9 @@ var HeroesComponent = /** @class */ (function () {
         };
         this.heroes = _mock_heroes__WEBPACK_IMPORTED_MODULE_1__["HEROES"];
     }
+    HeroesComponent.prototype.onSelect = function (hero) {
+        this.selectedHero = hero;
+    };
     HeroesComponent.prototype.ngOnInit = function () {
     };
     HeroesComponent = __decorate([
