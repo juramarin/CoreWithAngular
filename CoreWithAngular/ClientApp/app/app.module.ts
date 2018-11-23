@@ -8,9 +8,10 @@ import { Checkout } from "./checkout/checkout.component";
 import { DataService } from "./shared/dataService";
 
 import { RouterModule } from "@angular/router";
+import { HeroesComponent } from './heroes/heroes.component';
 
 let routes = [
-    { path: "", component: Shop },
+    { path: "", component: HeroesComponent },
     { path: "checkout", component: Checkout }
 ];
 
@@ -19,7 +20,8 @@ let routes = [
   declarations: [
       AppComponent,
       Shop,
-      Checkout
+      Checkout,
+      HeroesComponent
   ],
   imports: [
     BrowserModule,

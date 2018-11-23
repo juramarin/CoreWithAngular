@@ -2,7 +2,7 @@
 
 ## Steps
 
-#### VS add basic npm config file
+### VS add basic npm config file
 
 
 ### working directory is inside solution root directory
