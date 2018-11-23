@@ -4,19 +4,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component } from '@angular/core';
-var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'hero editor example (async (rxjs) services)';
+import { Injectable } from '@angular/core';
+var MessageService = /** @class */ (function () {
+    function MessageService() {
+        this.messages = [];
     }
-    AppComponent = __decorate([
-        Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+    MessageService.prototype.add = function (message) {
+        this.messages.push(message);
+    };
+    MessageService.prototype.clear = function () {
+        this.messages = [];
+    };
+    MessageService = __decorate([
+        Injectable({
+            providedIn: 'root'
         })
-    ], AppComponent);
-    return AppComponent;
+    ], MessageService);
+    return MessageService;
 }());
-export { AppComponent };
-//# sourceMappingURL=app.component.js.map
+export { MessageService };
+//# sourceMappingURL=message.service.js.map

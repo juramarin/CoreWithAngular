@@ -23,43 +23,6 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./app/app-routing.module.ts":
-/*!***********************************!*\
-  !*** ./app/app-routing.module.ts ***!
-  \***********************************/
-/*! exports provided: AppRoutingModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-var routes = [];
-var AppRoutingModule = /** @class */ (function () {
-    function AppRoutingModule() {
-    }
-    AppRoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
-        })
-    ], AppRoutingModule);
-    return AppRoutingModule;
-}());
-
-
-
-/***/ }),
-
 /***/ "./app/app.component.css":
 /*!*******************************!*\
   !*** ./app/app.component.css ***!
@@ -128,19 +91,14 @@ var AppComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "../node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "../node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./app/app.component.ts");
-/* harmony import */ var _shop_shop_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shop/shop.component */ "./app/shop/shop.component.ts");
-/* harmony import */ var _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./checkout/checkout.component */ "./app/checkout/checkout.component.ts");
-/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/dataService */ "./app/shared/dataService.ts");
-/* harmony import */ var _hero_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./hero.service */ "./app/hero.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./heroes/heroes.component */ "./app/heroes/heroes.component.ts");
-/* harmony import */ var _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./hero-detail/hero-detail.component */ "./app/hero-detail/hero-detail.component.ts");
-/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./messages/messages.component */ "./app/messages/messages.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "../node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "../node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./app/app.component.ts");
+/* harmony import */ var _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./heroes/heroes.component */ "./app/heroes/heroes.component.ts");
+/* harmony import */ var _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./hero-detail/hero-detail.component */ "./app/hero-detail/hero-detail.component.ts");
+/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./messages/messages.component */ "./app/messages/messages.component.ts");
+/* harmony import */ var _hero_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hero.service */ "./app/hero.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -155,100 +113,28 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-
-
-
-var routes = [
-    { path: "", component: _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_10__["HeroesComponent"] },
-    { path: "checkout", component: _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_6__["Checkout"] }
-];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _shop_shop_component__WEBPACK_IMPORTED_MODULE_5__["Shop"],
-                _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_6__["Checkout"],
-                _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_10__["HeroesComponent"],
-                _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_11__["HeroDetailComponent"],
-                _messages_messages_component__WEBPACK_IMPORTED_MODULE_12__["MessagesComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                _heroes_heroes_component__WEBPACK_IMPORTED_MODULE_4__["HeroesComponent"],
+                _hero_detail_hero_detail_component__WEBPACK_IMPORTED_MODULE_5__["HeroDetailComponent"],
+                _messages_messages_component__WEBPACK_IMPORTED_MODULE_6__["MessagesComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_9__["RouterModule"].forRoot(routes, {
-                    useHash: true,
-                    enableTracing: false // for Debuging of the Routes
-                })
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]
             ],
             providers: [
-                _shared_dataService__WEBPACK_IMPORTED_MODULE_7__["DataService"],
-                _hero_service__WEBPACK_IMPORTED_MODULE_8__["HeroService"]
+                _hero_service__WEBPACK_IMPORTED_MODULE_7__["HeroService"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./app/checkout/checkout.component.html":
-/*!**********************************************!*\
-  !*** ./app/checkout/checkout.component.html ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n    <h2>Checkout</h2>\r\n    <h3>Some products from DataService</h3>\r\n    <div class=\"col-md-3\">\r\n        <ul>\r\n            <li *ngFor=\"let p of products\">{{ p.title }}: {{ p.price | currency: \"USD\" }}</li>\r\n        </ul>\r\n        <h4>Total: $xxxxx.xx</h4>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n        <a routerLink=\"\" class=\"btn btn-info\">Back</a>\r\n    </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "./app/checkout/checkout.component.ts":
-/*!********************************************!*\
-  !*** ./app/checkout/checkout.component.ts ***!
-  \********************************************/
-/*! exports provided: Checkout */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Checkout", function() { return Checkout; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../shared/dataService */ "./app/shared/dataService.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var Checkout = /** @class */ (function () {
-    function Checkout(data) {
-        this.data = data;
-        this.products = [];
-        this.products = data.products;
-    }
-    Checkout = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "the-checkout",
-            template: __webpack_require__(/*! ./checkout.component.html */ "./app/checkout/checkout.component.html"),
-            styleUrls: []
-        }),
-        __metadata("design:paramtypes", [_shared_dataService__WEBPACK_IMPORTED_MODULE_1__["DataService"]])
-    ], Checkout);
-    return Checkout;
 }());
 
 
@@ -600,81 +486,6 @@ var HEROES = [
     { id: 19, name: 'Magma' },
     { id: 20, name: 'Tornado' }
 ];
-
-
-/***/ }),
-
-/***/ "./app/shared/dataService.ts":
-/*!***********************************!*\
-  !*** ./app/shared/dataService.ts ***!
-  \***********************************/
-/*! exports provided: DataService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
-var DataService = /** @class */ (function () {
-    function DataService() {
-        this.products = [{
-                title: "First product",
-                price: 1.00
-            }, {
-                title: "Second product",
-                price: 82.25
-            }, {
-                title: "Third product",
-                price: 117.02
-            }];
-    }
-    return DataService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./app/shop/shop.component.html":
-/*!**************************************!*\
-  !*** ./app/shop/shop.component.html ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n    <h2>Shop</h2>\r\n    <h3>Some shop description</h3>\r\n    <div class=\"col-md-3\">\r\n        <div class=\"well well-sm\">\r\n            some text some text some text some text\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n        <a routerLink=\"checkout\" class=\"btn btn-success\">Checkout</a>\r\n    </div> \r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "./app/shop/shop.component.ts":
-/*!************************************!*\
-  !*** ./app/shop/shop.component.ts ***!
-  \************************************/
-/*! exports provided: Shop */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Shop", function() { return Shop; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var Shop = /** @class */ (function () {
-    function Shop() {
-    }
-    Shop = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "the-shop",
-            template: __webpack_require__(/*! ./shop.component.html */ "./app/shop/shop.component.html")
-        })
-    ], Shop);
-    return Shop;
-}());
-
 
 
 /***/ }),

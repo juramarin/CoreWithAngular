@@ -8,19 +8,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { HEROES } from '../mock-heroes';
+import { HeroService } from '../hero.service';
 var HeroesComponent = /** @class */ (function () {
-    function HeroesComponent() {
+    function HeroesComponent(heroService) {
+        this.heroService = heroService;
         this.hero = {
             id: 1,
             name: 'Windstorm'
         };
-        this.heroes = HEROES;
     }
+    HeroesComponent.prototype.ngOnInit = function () {
+        this.getHeroes();
+    };
     HeroesComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
     };
-    HeroesComponent.prototype.ngOnInit = function () {
+    HeroesComponent.prototype.getHeroes = function () {
+        var _this = this;
+        this.heroService.getHeroes()
+            .subscribe(function (heroes) { return _this.heroes = heroes; });
     };
     HeroesComponent = __decorate([
         Component({
@@ -28,7 +34,7 @@ var HeroesComponent = /** @class */ (function () {
             templateUrl: './heroes.component.html',
             styleUrls: ['./heroes.component.css']
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [HeroService])
     ], HeroesComponent);
     return HeroesComponent;
 }());

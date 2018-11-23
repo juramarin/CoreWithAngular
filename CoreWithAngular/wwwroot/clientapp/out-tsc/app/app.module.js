@@ -4,21 +4,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Shop } from "./shop/shop.component";
-import { Checkout } from "./checkout/checkout.component";
-import { DataService } from "./shared/dataService";
-import { RouterModule } from "@angular/router";
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-var routes = [
-    { path: "", component: HeroesComponent },
-    { path: "checkout", component: Checkout }
-];
+import { MessagesComponent } from './messages/messages.component';
+import { HeroService } from "./hero.service";
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -26,22 +19,16 @@ var AppModule = /** @class */ (function () {
         NgModule({
             declarations: [
                 AppComponent,
-                Shop,
-                Checkout,
                 HeroesComponent,
-                HeroDetailComponent
+                HeroDetailComponent,
+                MessagesComponent
             ],
             imports: [
                 BrowserModule,
-                FormsModule,
-                AppRoutingModule,
-                RouterModule.forRoot(routes, {
-                    useHash: true,
-                    enableTracing: false // for Debuging of the Routes
-                })
+                FormsModule
             ],
             providers: [
-                DataService
+                HeroService
             ],
             bootstrap: [AppComponent]
         })
